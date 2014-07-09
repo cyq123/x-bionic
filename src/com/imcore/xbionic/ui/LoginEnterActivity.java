@@ -1,8 +1,7 @@
 package com.imcore.xbionic.ui;
 
 import com.imcore.xbionic.R;
-import com.imcore.xbionic.R.layout;
-import com.imcore.xbionic.R.menu;
+
 
 import android.os.Bundle;
 import android.app.Activity;

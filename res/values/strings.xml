@@ -8,5 +8,6 @@
     <string name="title_activity_welcome_two">WelcomeTwoActivity</string>
     <string name="title_activity_enter">EnterActivity</string>
     <string name="title_activity_login_enter">LoginEnterActivity</string>
+    <string name="title_activity_register_enter">RegisterEnterActivity</string>
 
 </resources>

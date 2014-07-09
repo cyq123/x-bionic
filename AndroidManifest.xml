@@ -12,7 +12,8 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat" >
+        android:theme="@style/Theme.AppCompat" 
+ >
         <activity
             android:name="com.imcore.xbionic.ui.MainActivity"
             android:label="@string/app_name" >
@@ -36,9 +37,14 @@
             android:label="@string/title_activity_enter" >
         </activity>
         <activity
-            android:name="com.imcore.xbionic.LoginEnterActivity"
-            android:label="@string/title_activity_login_enter" 
-            android:theme="@style/MyCustomTheme">
+            android:name="com.imcore.xbionic.ui.LoginEnterActivity"
+            android:label="@string/title_activity_login_enter"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name="com.imcore.xbionic.ui.RegisterEnterActivity"
+            android:label="@string/title_activity_register_enter" 
+            android:theme="@style/MyCustomTheme" >
         </activity>
     </application>
 

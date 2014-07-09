@@ -2,11 +2,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/peoplebackground"
     tools:context=".LoginEnterActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:text="无限增值服务应用，欢迎您！"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" >
+
+            <EditText
+                android:id="@+id/et_userName_loginEnter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/enterbound"
+                android:drawableLeft="@drawable/personpicture"
+                android:hint="   用户名" 
+             />
+
+            <EditText
+                android:id="@+id/et_passWord_loginEnter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_userName_loginEnter"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/enterbound"
+                android:drawableLeft="@drawable/keypicture"
+                android:hint="  请输入密码"
+                android:inputType="textPassword" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/layout1" >
+
+            <ImageButton
+                android:id="@+id/imgbtn1_userName_loginEnter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/go_tribe" />
+
+            <ImageButton
+                android:id="@+id/imgbtn2_passWord_loginEnter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgbtn1_userName_loginEnter"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/passwordpicture"
+                android:inputType="textPassword" />
+        </RelativeLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
