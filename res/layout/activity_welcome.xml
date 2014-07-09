@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity" >
+
+
+   <com.imcore.xbionic.fragment.VirtivalProgres
+        android:id="@+id/img_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="700dp"
+        android:layout_height="200dp" 
+        android:max="3000" 
+        
+        android:progressDrawable="@drawable/progressbar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:id="@+id/img_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/demo1" />
+
+</RelativeLayout>

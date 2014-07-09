@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnterActivity" >
+
+    <ImageView
+        android:id="@+id/imgbg_enter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg" />
+
+    <ImageView
+        android:id="@+id/img_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/maintrademark" />
+
+    <ImageButton
+        android:id="@+id/btn1_qq_login_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_enter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/qq_login" />
+
+    <ImageButton
+        android:id="@+id/btn2_sina_login_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn1_qq_login_enter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/sina_login" />
+
+    <ImageButton
+        android:id="@+id/btn3_login_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn2_sina_login_enter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login" />
+
+    <ImageView
+        android:id="@+id/img2_enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn3_login_enter"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/line" />
+
+    <ImageButton
+        android:id="@+id/btn4_register_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/img2_enter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/register" />
+
+    <ImageView
+        android:id="@+id/img4_enter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn4_register_enter"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/line" />
+
+    <ImageButton
+        android:id="@+id/txt1_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/help_1"
+        android:text="帮助" />
+
+    <ImageButton
+        android:id="@+id/txt2_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/serve_1"
+        android:text="服务条款" />
+
+</RelativeLayout>
