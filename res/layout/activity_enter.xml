@@ -71,7 +71,7 @@
         android:background="@drawable/line" />
 
     <ImageButton
-        android:id="@+id/txt1_enter"
+        android:id="@+id/txt1_helper_enter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

@@ -26,7 +26,7 @@ public class ThreeFragment extends Fragment{
 			public void onClick(View arg0) {
 				Intent intent = new Intent(getActivity(),EnterActivity.class);
 				startActivity(intent);
-			
+				getActivity().finish();
 			}
 		});
 

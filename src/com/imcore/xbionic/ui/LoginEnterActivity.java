@@ -7,7 +7,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -70,9 +73,10 @@ public class LoginEnterActivity extends Activity {
 	
 	@SuppressWarnings("unused")
 	private void doLogin() {
-		final String userName = etName.getText().toString().trim();
-		final String password = etPassword.getText().toString().trim();
-
+//		final String userName = etName.getText().toString().trim();
+//		final String password = etPassword.getText().toString().trim();
+		final String userName = "18750942180";
+		final String password = "873002792";
 		String url = Constant.HOST + "/passport/login.do";
 		DataRequest request = new DataRequest(Request.Method.POST, url,
 				new Response.Listener<String>() {
@@ -109,9 +113,32 @@ public class LoginEnterActivity extends Activity {
 	
 	private void onResponseForLogin(String response){
 		
+		String userAddress = JsonUtil.getJsonValueByKey(response, "userAddress");
+		JSONObject jo;
+		String userId =null;
+		try {
+			jo = new JSONObject(userAddress);
+			userId = jo.getString("userId");
+			
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String token = JsonUtil.getJsonValueByKey(response, "token");
+		String firstName = JsonUtil.getJsonValueByKey(response, "firstName");
+		String lastName = JsonUtil.getJsonValueByKey(response, "lastName");
+		String userName = lastName+firstName;
 		
+		SharedPreferences sp = getSharedPreferences("userinfo",Context.MODE_PRIVATE);
+		Editor edit = sp.edit();
+		edit.putString("userId", userId);
+		edit.putString("token", token);
+		edit.putString("userName", userName);
+		edit.putBoolean("isLogin", true);
+		edit.commit();
 		
-		Intent intent = new Intent(LoginEnterActivity.this,MainActivity.class);
+		Intent intent = new Intent(LoginEnterActivity.this,LoginEnterAfterActivity.class);
+		intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);//清楚栈内其他activity;
 		startActivity(intent);
 	}
 

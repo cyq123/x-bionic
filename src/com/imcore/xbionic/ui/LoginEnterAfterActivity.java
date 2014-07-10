@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
@@ -13,7 +13,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-
 import com.imcore.xbionic.R;
 
 public class LoginEnterAfterActivity extends ActionBarActivity {
@@ -28,13 +27,14 @@ public class LoginEnterAfterActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login_enter_after);
 		initDrawerLayout();
+		initActionBarToggle();
 	}
 	
 	private void initDrawerLayout(){
 		drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		naviItemText = getResources().getStringArray(R.array.navi_item);
 		
-		drawerLayout.setDrawerShadow(R.drawable.productmoreviewbackground, GravityCompat.START);
+		drawerLayout.setDrawerShadow(R.drawable.boult_right, GravityCompat.START);
 		
 		List<Map<String,Object>> data = new ArrayList<Map<String,Object>>();		
 		Map<String, Object> item1 = new HashMap<String, Object>();
@@ -66,7 +66,21 @@ public class LoginEnterAfterActivity extends ActionBarActivity {
 		listView.setAdapter(new SimpleAdapter(this, data, R.layout.activity_view_drawer_list_item, from, to));
 		
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		getSupportActionBar().setHomeButtonEnabled(true);
+		//getSupportActionBar().setHomeButtonEnabled(true);
+	}
+	
+	private void initActionBarToggle(){
+		drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.drawable.listbutton, R.string.drawer_open, R.string.drawer_close){
+			@SuppressLint("NewApi")
+			public void onDrawerOpened(){
+				invalidateOptionsMenu();
+			}
+			@SuppressLint("NewApi")
+			public void onDrawerClose(){
+				invalidateOptionsMenu();
+			}
+		};
+		drawerLayout.setDrawerListener(drawerToggle);
 	}
 	
 	@Override
