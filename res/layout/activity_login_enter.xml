@@ -55,7 +55,7 @@
             android:layout_below="@id/layout1" >
 
             <ImageButton
-                android:id="@+id/imgbtn1_userName_loginEnter"
+                android:id="@+id/imgbtn1_loginEnter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -65,7 +65,7 @@
                 android:id="@+id/imgbtn2_passWord_loginEnter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/imgbtn1_userName_loginEnter"
+                android:layout_below="@id/imgbtn1_loginEnter"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/passwordpicture"
                 android:inputType="textPassword" />

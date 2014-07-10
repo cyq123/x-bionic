@@ -11,5 +11,6 @@
     <string name="title_activity_register_enter">RegisterEnterActivity</string>
     <string name="title_activity_QQ_Login_enter">QQLoginEnterActivity</string>
     <string name="title_activity_Sina_Login_enter">SinaLoginEnterActivity</string>
+    <string name="title_activity_login_enter_after">LoginEnterAfterActivity</string>
 
 </resources>
