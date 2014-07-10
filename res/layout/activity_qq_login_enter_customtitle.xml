@@ -4,7 +4,7 @@
     android:layout_height="match_parent" >
 
     <ImageView
-		android:id="@+id/img_register_enter_title"
+		android:id="@+id/img_qq_login_enter_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
         android:layout_centerVertical="true"
@@ -12,11 +12,11 @@
         android:background="@drawable/back_btn_press"
         />
   <TextView
-		android:id="@+id/txt_login_enter_title"
+		android:id="@+id/txt_qq_login_enter_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
         android:layout_centerHorizontal="true"
         android:textSize="30sp"
-        android:text="注册"
+        android:text="授权"
         />
 </RelativeLayout>

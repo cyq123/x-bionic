@@ -33,9 +33,11 @@ public class EnterActivity extends Activity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 	if(v.getId() == R.id.btn1_qq_login_enter){
-		
+		Intent intent = new Intent(EnterActivity.this,QQLoginEnterActivity.class);
+		startActivity(intent);
 	}if(v.getId() == R.id.btn2_sina_login_enter){
-		
+		Intent intent = new Intent(EnterActivity.this,SinaLoginEnterActivity.class);
+		startActivity(intent);
 	}if(v.getId() == R.id.btn3_login_enter){
 		Intent intent = new Intent(EnterActivity.this,LoginEnterActivity.class);
 		startActivity(intent);

@@ -4,7 +4,7 @@
     android:layout_height="match_parent" >
 
     <ImageView
-		android:id="@+id/img_register_enter_title"
+		android:id="@+id/img_sina_login_enter_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
         android:layout_centerVertical="true"
@@ -17,6 +17,6 @@
         android:layout_height="wrap_content" 
         android:layout_centerHorizontal="true"
         android:textSize="30sp"
-        android:text="注册"
+        android:text="微博认证"
         />
 </RelativeLayout>

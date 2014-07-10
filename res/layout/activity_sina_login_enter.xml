@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/allbackground" >
+
+    <Button
+        android:id="@+id/btn1_sina_loginEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/login_1"
+        android:text="微博认证OAUTH2.0" >
+    </Button>
+
+    <Button
+        android:id="@+id/btn2_sina_loginEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn1_sina_loginEnter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_1"
+        android:text="单点登录SSO" >
+    </Button>
+
+    <Button
+        android:id="@+id/btn3_sina_loginEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn2_sina_loginEnter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_1"
+        android:text="注销" >
+    </Button>
+
+    <TextView
+        android:id="@+id/txt_sina_loginEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn3_sina_loginEnter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:lines="5"
+        android:maxWidth="500dp"
+        android:text="g" >
+
+      
+    </TextView>
+
+</RelativeLayout>
