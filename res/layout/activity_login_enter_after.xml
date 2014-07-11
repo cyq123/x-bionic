@@ -17,11 +17,11 @@
 
         <ListView
             android:id="@+id/list_view"
-            android:layout_width="260dp"
-            android:layout_height="match_parent" 
-            android:layout_gravity="left"
-            >
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left" >
         </ListView>
+
     </android.support.v4.widget.DrawerLayout>
 
 </RelativeLayout>

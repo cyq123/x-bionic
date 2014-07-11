@@ -7,7 +7,8 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -58,7 +59,12 @@
         </activity>
         <activity
             android:name="com.imcore.xbionic.ui.LoginEnterAfterActivity"
-            android:label="@string/title_activity_login_enter_after" >
+            android:label="@string/title_activity_login_enter_after" 
+            >
+        </activity>
+        <activity
+            android:name="com.imcore.xbionic.fragment.HomeListHeaderActivity"
+            android:label="@string/title_activity_home_list_header" >
         </activity>
     </application>
 

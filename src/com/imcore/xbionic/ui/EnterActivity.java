@@ -3,17 +3,19 @@ package com.imcore.xbionic.ui;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
-import android.view.View.OnClickListener;
+
 import android.widget.ImageButton;
 
 import com.imcore.xbionic.R;
 
-public class EnterActivity extends Activity implements OnClickListener {
+public class EnterActivity extends Activity implements
+		android.view.View.OnClickListener {
 	ImageButton btn1_qq_login_enter, btn2_sina_login_enter, btn3_login_enter,
 			btn4_register_enter;
 	ImageButton helper;
@@ -68,34 +70,25 @@ public class EnterActivity extends Activity implements OnClickListener {
 
 	}
 
-	AlertDialog ad;
-
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		android.content.DialogInterface.OnClickListener listener = null;
-		android.content.DialogInterface.OnClickListener nolistener = null;
-		ad = new AlertDialog.Builder(this).setPositiveButton("确定", listener)
-				.setNegativeButton("取消", nolistener).setTitle("系统提示")
-				.setMessage("确定要退出吗？").show();
 
-		listener = new DialogInterface.OnClickListener() {
-			@Override
+		AlertDialog.Builder adb = new AlertDialog.Builder(this);
+		adb.setPositiveButton("确定", new OnClickListener() {
 			public void onClick(DialogInterface arg0, int arg1) {
 
 				finish();
-				
+				System.exit(0);
 
 			}
-		};
-
-		nolistener = new DialogInterface.OnClickListener() {
+		}).setNegativeButton("取消", new OnClickListener() {
 			@Override
 			public void onClick(DialogInterface arg0, int arg1) {
 
-				ad.cancel();
+				arg0.dismiss();
 
 			}
-		};
+		}).setTitle("系统提示").setMessage("确定要退出吗？").create().show();
 
 		return super.onKeyDown(keyCode, event);
 	}

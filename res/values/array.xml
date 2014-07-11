@@ -2,13 +2,13 @@
 <resources>
 
     <string-array name="navi_item">
-        <item>您的订购</item>
-        <item>账户设置</item>
-        <item>达人申请</item>
-        <item>部落社区</item>
-        <item>購物車</item>
-        <item>訂閱信息</item>
-        <item>分享設置</item>
+        <item>  您的订购</item>
+        <item>  账户设置</item>
+        <item>  达人申请</item>
+        <item>  部落社区</item>
+        <item>  購物車</item>
+        <item>  訂閱信息</item>
+        <item>  分享設置</item>
     </string-array>
 
 </resources>

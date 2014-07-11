@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:background="@drawable/shopcat_list1" >
+
+    <ImageView
+        android:id="@+id/img_drawer_list_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/head" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/img_drawer_list_header" >
+
+        <TextView
+            android:id="@+id/txt1_drawer_list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="#FFFFFF"
+            android:text="部落积分:" />
+
+        <TextView
+            android:id="@+id/txt2_drawer_list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/txt1_drawer_list_header"
+            android:text="200"
+            android:textColor="#E94311" />
+
+        <ImageView
+            android:id="@+id/imgpen_drawer_list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txt7_drawer_list_header"
+            android:layout_toRightOf="@id/txt2_drawer_list_header"
+            android:background="@drawable/pen" />
+
+        <TextView
+            android:id="@+id/txt3_drawer_list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt1_drawer_list_header"
+            android:layout_marginLeft="5dp"
+            android:textColor="#FFFFFF"
+            android:text="可兑换抵用券:" />
+
+        <TextView
+            android:id="@+id/txt4_drawer_list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt1_drawer_list_header"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/txt3_drawer_list_header"
+            android:text="0.00"
+            android:textColor="#E94311" />
+
+        <TextView
+            android:id="@+id/txt5_drawer_list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt1_drawer_list_header"
+            android:layout_marginLeft="3dp"
+            android:textColor="#FFFFFF"
+            android:layout_toRightOf="@id/txt4_drawer_list_header"
+            android:text="元" />
+
+        <TextView
+            android:id="@+id/txt6_drawer_list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt3_drawer_list_header"
+            android:layout_marginLeft="5dp"
+            android:textColor="#FFFFFF"
+            android:text="达人升级进度表" />
+
+        <ProgressBar
+            android:id="@+id/progress_drawer_list_header"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="5dp"
+            android:layout_below="@id/txt6_drawer_list_header"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:max="100"
+            android:progress="25"
+            android:progressDrawable="@drawable/progressbar" />
+
+        <TextView
+            android:id="@+id/txt7_drawer_list_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt6_drawer_list_header"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/progress_drawer_list_header"
+            android:text="25%" 
+            android:textColor="#FFFFFF"/>
+    </RelativeLayout>
+
+</RelativeLayout>

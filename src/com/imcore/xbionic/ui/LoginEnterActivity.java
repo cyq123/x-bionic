@@ -7,6 +7,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -36,6 +38,7 @@ public class LoginEnterActivity extends Activity {
 	private ImageView back;
 	private ImageButton enter;
 	private EditText etName,etPassword;
+	private ProgressDialog dlog;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +60,7 @@ public class LoginEnterActivity extends Activity {
 			
 			@Override
 			public void onClick(View arg0) {
+		
 				doLogin();
 				
 			}
@@ -77,6 +81,7 @@ public class LoginEnterActivity extends Activity {
 //		final String password = etPassword.getText().toString().trim();
 		final String userName = "18750942180";
 		final String password = "873002792";
+		dlog = ProgressDialog.show(LoginEnterActivity.this, "您好", "正在玩命的加载，请稍后。。。");
 		String url = Constant.HOST + "/passport/login.do";
 		DataRequest request = new DataRequest(Request.Method.POST, url,
 				new Response.Listener<String>() {
@@ -140,6 +145,7 @@ public class LoginEnterActivity extends Activity {
 		Intent intent = new Intent(LoginEnterActivity.this,LoginEnterAfterActivity.class);
 		intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);//清楚栈内其他activity;
 		startActivity(intent);
+		dlog.cancel();
 	}
 
 	@Override

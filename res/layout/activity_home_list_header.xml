@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/productsizebackground"
+    tools:context=".HomeListHeaderActivity" >
+
+            <ImageView
+                android:id="@+id/img1_login_enter_after"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/xactivtypage" />
+
+            <ImageView
+                android:id="@+id/img2_login_enter_after"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="100dp"
+                android:layout_toRightOf="@id/img1_login_enter_after"
+                android:background="@drawable/xactivtypage2" />
+
+            <ImageView
+                android:id="@+id/img3_login_enter_after"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/img1_login_enter_after"
+                android:background="@drawable/xactivtypage3" />
+
+            <ImageView
+                android:id="@+id/img4_login_enter_after"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/img1_login_enter_after"
+                android:layout_toRightOf="@id/img3_login_enter_after"
+                android:background="@drawable/xactivtypage4" />
+
+</RelativeLayout>
