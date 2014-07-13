@@ -333,7 +333,6 @@ int id img2_login_enter_after 0x7f050048
 int id img3_home_list_header_title 0x7f05004d
 int id img3_login_enter_after 0x7f050049
 int id img4_enter 0x7f050043
-int id img4_home_list_header_title 0x7f05004e
 int id img4_login_enter_after 0x7f05004a
 int id img_drawer_list_header 0x7f05006c
 int id img_enter 0x7f05003d
@@ -374,6 +373,7 @@ int id search_go_btn 0x7f05003a
 int id search_mag_icon 0x7f050035
 int id search_plate 0x7f050036
 int id search_src_text 0x7f050037
+int id search_view 0x7f05004e
 int id search_voice_btn 0x7f05003b
 int id shortcut 0x7f05002e
 int id showCustom 0x7f050007

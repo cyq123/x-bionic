@@ -6,39 +6,64 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.Activity;
-import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
+import android.widget.SearchView;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.imcore.xbionic.R;
+import com.imcore.xbionic.fragment.HomeListHeaderFragment;
 
 public class LoginEnterAfterActivity extends Activity {
 	private DrawerLayout drawerLayout;
 	private ListView listView;
-	private ActionBarDrawerToggle drawerToggle;
+	private ActionBarDrawerToggle drawerToggle;//给drawerlayout设监听
 	private View headerView;
 	
+	private SearchView searchView;
+	private ImageView openDrawer;
 	private final static String NAVI_ITEM_TEXT = "text";
 	String[] naviItemText;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
 		setContentView(R.layout.activity_login_enter_after);
+		getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.activity_home_list_header_title);
 		
-		initDrawerLayout();
+		openDrawer = (ImageView)findViewById(R.id.img1_home_list_header_title);
+		openDrawer.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				drawerLayout.openDrawer(Gravity.LEFT);
+			}
+		});
+		initSearchView();//搜索
+		initDrawerLayout();//抽屉
+ 
+		//Fragment frag = new HomeListHeaderFragment(); 
+	}
+	
+	public void initSearchView(){
+		searchView = (SearchView) findViewById(R.id.search_view);
+		searchView.setSubmitButtonEnabled(true);//文本框后提交按钮
 		
 	}
 	
+	//抽屉。。。。
 	private void initDrawerLayout(){
 		drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		naviItemText = getResources().getStringArray(R.array.navi_item);
@@ -69,17 +94,18 @@ public class LoginEnterAfterActivity extends Activity {
 	}
 	
 	private void initActionBarToggle(){
-		drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.drawable.listbutton, R.string.drawer_open, R.string.drawer_close){
+		drawerToggle = new ActionBarDrawerToggle(LoginEnterAfterActivity.this, drawerLayout, R.drawable.listbutton, R.string.drawer_open, R.string.drawer_close){
 	
 			@Override
 			public void onDrawerOpened(View drawerView) {
-				//getSupportActionBar().setTitle("部落平方");
+				setTitle("部落平方");
+				
 				super.onDrawerOpened(drawerView);
 			}
 			
 			@Override
 			public void onDrawerClosed(View drawerView) {
-			//getSupportActionBar().setTitle("部落平方");
+			   setTitle("部落平方2");
 				super.onDrawerClosed(drawerView);
 			}
 			
@@ -88,50 +114,52 @@ public class LoginEnterAfterActivity extends Activity {
 	}
 	
 	private class listener implements OnItemClickListener{
-		//final int positionHeader = listView.getItemAtPosition(headerView);
-		
+		android.app.Fragment frag = null;
 		@Override
 		public void onItemClick(AdapterView<?> arg0, View arg1, int position,
 				long arg3) {
+			
 			if(position >=0 && position<=naviItemText.length){
 				switch(position){
 				case 0:
-					MainActivity m = new MainActivity();
+					frag = new HomeListHeaderFragment(); 
 					break;
 				case 1:
-					Intent intent = new Intent(LoginEnterAfterActivity.this,MainActivity.class);
-					startActivity(intent);
+					frag = new HomeListHeaderFragment(); 
 					break;
 				case 2:
-					Intent intent1 = new Intent(LoginEnterAfterActivity.this,MainActivity.class);
-					startActivity(intent1);
 					break;
 				case 3:
-					Intent intent2 = new Intent(LoginEnterAfterActivity.this,MainActivity.class);
-					startActivity(intent2);
 					break;
 				case 4:
-					Intent intent3 = new Intent(LoginEnterAfterActivity.this,MainActivity.class);
-					startActivity(intent3);
 					break;
 				case 5:
-					Intent intent4 = new Intent(LoginEnterAfterActivity.this,MainActivity.class);
-					startActivity(intent4);
 					break;
 				case 6:
-					Intent intent5 = new Intent(LoginEnterAfterActivity.this,MainActivity.class);
-					startActivity(intent5);
 					break;
 				case 7:
-					Intent intent6 = new Intent(LoginEnterAfterActivity.this,MainActivity.class);
-					startActivity(intent6);
 					break;
 					
 				}
 			}
-			
+			getFragmentManager().beginTransaction().replace(R.id.frame_layout, frag).commit();
+			drawerLayout.closeDrawer(Gravity.LEFT);
 		}
 		
+	}
+	
+	@Override
+	protected void onPostCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onPostCreate(savedInstanceState);
+		drawerToggle.syncState();
+	}
+	
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		// TODO Auto-generated method stub
+		super.onConfigurationChanged(newConfig);
+		drawerToggle.onConfigurationChanged(newConfig);
 	}
 	
 	@Override

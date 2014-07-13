@@ -7,6 +7,7 @@
         android:id="@+id/img1_home_list_header_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:background="@drawable/listbutton" />
 
     <ImageView
@@ -14,21 +15,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:background="@drawable/buluo" />
 
     <ImageView
         android:id="@+id/img3_home_list_header_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:layout_toRightOf="@id/img2_home_list_header_title"
         android:background="@drawable/xiajiantou" />
 
-    <ImageView
+<!--     <ImageView
         android:id="@+id/img4_home_list_header_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
         android:layout_marginRight="10dp"
-        android:background="@drawable/searchbtnpic" />
+        android:background="@drawable/searchbtnpic" /> -->
+
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:iconifiedByDefault="true"
+        android:background="#313131"
+        android:imeOptions="actionSearch"  
+        android:queryHint="请输入要查找的内容"/>
+    <!--  android:imeOptions="actionSearch" 回车按钮  查询 -->
 
 </RelativeLayout>

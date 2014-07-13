@@ -1091,7 +1091,6 @@ containing a value of this type.
         public static final int img3_home_list_header_title=0x7f05004d;
         public static final int img3_login_enter_after=0x7f050049;
         public static final int img4_enter=0x7f050043;
-        public static final int img4_home_list_header_title=0x7f05004e;
         public static final int img4_login_enter_after=0x7f05004a;
         public static final int img_drawer_list_header=0x7f05006c;
         public static final int img_enter=0x7f05003d;
@@ -1132,6 +1131,7 @@ containing a value of this type.
         public static final int search_mag_icon=0x7f050035;
         public static final int search_plate=0x7f050036;
         public static final int search_src_text=0x7f050037;
+        public static final int search_view=0x7f05004e;
         public static final int search_voice_btn=0x7f05003b;
         public static final int shortcut=0x7f05002e;
         public static final int showCustom=0x7f050007;
