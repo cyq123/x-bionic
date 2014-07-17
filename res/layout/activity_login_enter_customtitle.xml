@@ -12,10 +12,11 @@
         android:background="@drawable/back_btn_press"
         />
   <TextView
-		android:id="@+id/img_login_enter_title"
+		android:id="@+id/img2_login_enter_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" 
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:textSize="30sp"
         android:text="登录"
         />

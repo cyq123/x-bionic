@@ -15,5 +15,9 @@
     <string name="title_activity_Sina_Login_enter">SinaLoginEnterActivity</string>
     <string name="title_activity_login_enter_after">LoginEnterAfterActivity</string>
     <string name="title_activity_home_list_header">HomeListHeaderActivity</string>
+    <string name="title_activity_activities_main">ActivitiesMainActivity</string>
+    <string name="title_activity_introduction_home">IntroductionHomeActivity</string>
+    <string name="title_activity_expert_story_home">ExpertStoryHomeActivity</string>
+    <string name="title_activity_product_main">ProductMainActivity</string>
 
 </resources>

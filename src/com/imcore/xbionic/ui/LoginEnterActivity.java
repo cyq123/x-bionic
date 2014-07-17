@@ -40,6 +40,8 @@ public class LoginEnterActivity extends Activity {
 	private EditText etName,etPassword;
 	private ProgressDialog dlog;
 	
+	SharedPreferences putUserInfo;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -52,7 +54,10 @@ public class LoginEnterActivity extends Activity {
 		etName = (EditText) findViewById(R.id.et_userName_loginEnter);
 		etPassword = (EditText) findViewById(R.id.et_passWord_loginEnter);
 		onclick();
-
+		
+		SharedPreferences getUserInfo = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+		etName.setText(getUserInfo.getString("name", null));
+		etPassword.setText(getUserInfo.getString("pass", null));
 	}
 	
 	private void onclick(){
@@ -60,9 +65,16 @@ public class LoginEnterActivity extends Activity {
 			
 			@Override
 			public void onClick(View arg0) {
-		
-				doLogin();
+				String userName = etName.getText().toString();
+				String passWord = etPassword.getText().toString();
 				
+				putUserInfo = getSharedPreferences("userInfo", Context.MODE_PRIVATE);
+				Editor e = putUserInfo.edit();
+				e.putString("name", userName);
+				e.putString("pass", passWord);
+				e.commit();
+				
+				doLogin();
 			}
 		});
 		
@@ -77,10 +89,10 @@ public class LoginEnterActivity extends Activity {
 	
 	@SuppressWarnings("unused")
 	private void doLogin() {
-//		final String userName = etName.getText().toString().trim();
-//		final String password = etPassword.getText().toString().trim();
-		final String userName = "18750942180";
-		final String password = "873002792";
+		final String userName = etName.getText().toString().trim();
+		final String password = etPassword.getText().toString().trim();
+//		final String userName = "18750942180";
+//		final String password = "873002792";
 		dlog = ProgressDialog.show(LoginEnterActivity.this, "您好", "正在玩命的加载，请稍后。。。");
 		String url = Constant.HOST + "/passport/login.do";
 		DataRequest request = new DataRequest(Request.Method.POST, url,
@@ -88,6 +100,7 @@ public class LoginEnterActivity extends Activity {
 					@Override
 					public void onResponse(String response) {
 						// 解析用户信息的json，保存userid和token
+						Log.i("userId", response);
 						onResponseForLogin(response);
 									
 
@@ -124,6 +137,7 @@ public class LoginEnterActivity extends Activity {
 		try {
 			jo = new JSONObject(userAddress);
 			userId = jo.getString("userId");
+			//Log.i("userId", userId);====userId:2351
 			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
@@ -142,7 +156,7 @@ public class LoginEnterActivity extends Activity {
 		edit.putBoolean("isLogin", true);
 		edit.commit();
 		
-		Intent intent = new Intent(LoginEnterActivity.this,LoginEnterAfterActivity.class);
+		Intent intent = new Intent(LoginEnterActivity.this,LoginEnterAfterHomeActivity.class);
 		intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);//清楚栈内其他activity;
 		startActivity(intent);
 		dlog.cancel();

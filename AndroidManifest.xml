@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
+        android:minSdkVersion="8"
         android:targetSdkVersion="19" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -58,13 +58,33 @@
             android:theme="@style/MyCustomTheme" >
         </activity>
         <activity
-            android:name="com.imcore.xbionic.ui.LoginEnterAfterActivity"
-            android:label="@string/title_activity_login_enter_after" 
-           android:theme="@style/MyCustomTheme" >
+            android:name="com.imcore.xbionic.ui.LoginEnterAfterHomeActivity"
+            android:label="@string/title_activity_login_enter_after"
+            android:theme="@style/MyCustomTheme" >
         </activity>
         <activity
             android:name="com.imcore.xbionic.fragment.HomeListHeaderFragment"
             android:label="@string/title_activity_home_list_header" >
+        </activity>
+        <activity
+            android:name="com.imcore.xbionic.ui.ActivitiesMainActivity"
+            android:label="@string/title_activity_activities_main"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name="com.imcore.xbionic.ui.IntroductionHomeActivity"
+            android:label="@string/title_activity_introduction_home"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name="com.imcore.xbionic.ui.ExpertStoryHomeActivity"
+            android:label="@string/title_activity_expert_story_home"
+            android:theme="@style/MyCustomTheme" >
+        </activity>
+        <activity
+            android:name="com.imcore.xbionic.product.ProductMainActivity"
+            android:label="@string/title_activity_product_main" 
+            android:theme="@style/MyCustomTheme">
         </activity>
     </application>
 

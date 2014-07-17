@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginEnterAfterActivity" >
+    tools:context=".LoginEnterAfterHomeActivity" >
 
     <android.support.v4.widget.DrawerLayout
         android:id="@+id/drawer_layout"
@@ -19,34 +19,34 @@
                 android:layout_height="match_parent" 
                 android:layout_marginLeft = "30dp">
 
-                <ImageView
-                    android:id="@+id/img1_login_enter_after"
+                <Button
+                    android:id="@+id/img_activities_login_enter_after"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_marginTop="100dp"
                     android:background="@drawable/xactivtypage" />
 
-                <ImageView
-                    android:id="@+id/img2_login_enter_after"
+                <Button
+                    android:id="@+id/img2_introduction_login_enter_after"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:layout_marginTop="100dp"
-                    android:layout_toRightOf="@id/img1_login_enter_after"
+                    android:layout_toRightOf="@id/img_activities_login_enter_after"
                     android:background="@drawable/xactivtypage2" />
 
-                <ImageView
-                    android:id="@+id/img3_login_enter_after"
+                <Button
+                    android:id="@+id/img3_product_login_enter_after"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:layout_below="@id/img1_login_enter_after"
+                    android:layout_below="@id/img_activities_login_enter_after"
                     android:background="@drawable/xactivtypage3" />
 
-                <ImageView
-                    android:id="@+id/img4_login_enter_after"
+                <Button
+                    android:id="@+id/img4_expertstory_login_enter_after"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:layout_below="@id/img1_login_enter_after"
-                    android:layout_toRightOf="@id/img3_login_enter_after"
+                    android:layout_below="@id/img_activities_login_enter_after"
+                    android:layout_toRightOf="@id/img3_product_login_enter_after"
                     android:background="@drawable/xactivtypage4" />
             </RelativeLayout>
         </FrameLayout>
